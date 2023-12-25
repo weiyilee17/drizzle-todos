@@ -1,8 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This is a todo app using Next 14's server action, drizzle, and mysql.
+
 ## Getting Started
 
-First, run the development server:
+First, change .env.example to .env.local, and replace the string to the connection string of the database.
+
+Then, run the development server:
 
 ```bash
 npm run dev
