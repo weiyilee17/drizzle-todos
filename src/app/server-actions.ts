@@ -25,7 +25,6 @@ export async function createTodoAction(prevState: TCreateTodoFormState, formData
   const validatedFields = createTodoSchema.safeParse({
     content,
   });
-  console.log('validatedFields', validatedFields);
 
   if (!validatedFields.success) {
     return {
@@ -46,7 +45,6 @@ export async function createTodoAction(prevState: TCreateTodoFormState, formData
     await db.insert(todos).values({
       content: validContent,
     });
-    console.log('inserted into db');
   } catch (error) {
     console.error('Database error', error);
     return {
